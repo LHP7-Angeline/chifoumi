@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "digital";
+    src: url("Digital.eot") format("eot"),
+    url("Digital.svg") format("svg"),
+    url("Digital.ttf") format("ttf"),
+    url("Digital.woff") format("woff");
+}
+
+html, body{
+    height: 90vh;
+}
+
+body{
+    background-image: url("img/nba.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Graduate', cursive;
+    margin: 0;
+}
+
+.title{
+    background-color: #1C4288;
+    height: 18vh;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100vw;
+}
+
+h1{
+    text-align: center;
+    font-size: 4rem;
+    color: rgb(255, 255, 255);
+    /* margin-bottom: 4rem; */
+    margin: auto;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.4fr;
+    gap: 3rem;
+    row-gap: 0.5rem;
+    margin: 2rem;
+    color: white;
+    margin-top: 5rem;
+}
+
+.player, .ia{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 50vh;
+    border-radius: 0.5rem;
+}
+
+.score{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    border-radius: 0.5rem;
+    border: 0.3rem solid white;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: "digital";
+    font-size: 7rem;
+    height: 30vh;
+}
+
+.playerName{
+    font-size: 1.5rem;
+}
+
+.players{
+    font-size: 1rem;
+    height: 2rem;
+    color: #C80F2E;
+}
+
+#newPlay{
+    grid-column: 2;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Graduate', cursive;
+    width: 50%;
+    margin: auto;
+    padding: 0.3rem;
+}
+
+.choicePlayer{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1.4rem;
+}
+
+#screenWeaponPlayer{
+    margin-bottom: 1rem;
+    height: 30%;
+}
+
+img{
+    width: 4rem;
+    cursor: pointer;
+}
+
+#screenResult{
+    font-size: 2rem;
+}
+
+.chooseIA{
+    cursor: auto;
+    width: 10rem;
+    margin-top: 1rem;
+}
+
+.choosePlayer{
+    cursor: auto;
+    width: 6rem;
+}
+
+.rules{
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 0.5rem;
+}
+
+.iconTeam{
+    width: 1.8rem;
+    cursor: auto;
+}
+
+.auto{
+    text-align: center;
+    font-size: 1.2rem;
+}
