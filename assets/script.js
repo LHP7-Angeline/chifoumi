@@ -54,7 +54,7 @@ function chooseTeam(element) {
         document.getElementById('screenWeaponPlayer').innerHTML = `<img src="assets/img/${player}.png" class="choosePlayer">`;
         document.getElementById('screenWeaponIA').innerHTML = `<img src="assets/img/${IA}.png" class="chooseIA">`;
 
-        myResult.innerHTML = displayResult();
+        myResult.textContent = displayResult();
     }
 
 }
