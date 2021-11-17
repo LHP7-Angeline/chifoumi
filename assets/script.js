@@ -92,7 +92,3 @@ function displayResult() {
         return 'Gagné';
     }
 }
-
-// if(playerScore == 5){
-//     document.getElementById('victory').innerHTML = `<img src="assets/img/arcade_basketball.gif">`;
-// }
