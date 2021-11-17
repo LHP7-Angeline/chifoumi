@@ -1,6 +1,6 @@
 const weapon = ['pierre', 'feuille', 'ciseaux'];
 
-const teams = ['celtics','lakers','warriors'];
+const teams = ['celtics', 'lakers', 'warriors'];
 
 
 
@@ -17,7 +17,7 @@ function pickWeapon(list) {
 }
 
 //Lancer une nouvelle partie
-function launchNewPlay(){
+function launchNewPlay() {
     document.getElementById('scoreUser').textContent = 0;
     document.getElementById('scoreAI').textContent = 0;
     document.getElementById('screenWeaponPlayer').textContent = '';
@@ -33,12 +33,12 @@ document.getElementById('newPlay').onclick = () => launchNewPlay();
 //Choisir une arme
 // function chooseWeapon(element) {
 
-    // if (element.target.nodeName == 'BUTTON' && element.target.id != 'newPlay') {
-        // IA = pickWeapon(weapon);
-        // player = element.target.value;
-        // document.getElementById('screenWeaponPlayer').textContent = element.target.textContent;
-        // document.getElementById('screenWeaponIA').textContent = IA.charAt(0).toUpperCase() + IA.slice(1);
-        
+// if (element.target.nodeName == 'BUTTON' && element.target.id != 'newPlay') {
+// IA = pickWeapon(weapon);
+// player = element.target.value;
+// document.getElementById('screenWeaponPlayer').textContent = element.target.textContent;
+// document.getElementById('screenWeaponIA').textContent = IA.charAt(0).toUpperCase() + IA.slice(1);
+
 //         myResult.innerHTML = displayResult(); 
 //     }
 
@@ -47,8 +47,8 @@ document.getElementById('newPlay').onclick = () => launchNewPlay();
 // document.addEventListener('click', chooseWeapon);
 
 //Choisir une équipe
-function chooseTeam(element){
-    if(element.target.tagName == 'IMG' && element.target.className != 'chooseIA' && element.target.className != 'choosePlayer' && element.target.className != 'iconTeam'){
+function chooseTeam(element) {
+    if (element.target.tagName == 'IMG' && element.target.className != 'chooseIA' && element.target.className != 'choosePlayer' && element.target.className != 'iconTeam') {
         IA = pickWeapon(teams);
         player = element.target.id;
         document.getElementById('screenWeaponPlayer').innerHTML = `<img src="assets/img/${player}.png" class="choosePlayer">`;
@@ -56,7 +56,7 @@ function chooseTeam(element){
 
         myResult.innerHTML = displayResult();
     }
-    
+
 }
 
 document.addEventListener('click', chooseTeam);
@@ -82,13 +82,20 @@ document.addEventListener('click', chooseTeam);
 function displayResult() {
     if (player === IA) {
         return 'Egalité';
-    } else if ((player === 'celtics' && IA === 'lakers') || (player === 'lakers' && IA === 'warriors') || (player === 'warriors' && IA === 'celtics')) { 
+    } else if ((player === 'celtics' && IA === 'lakers') || (player === 'lakers' && IA === 'warriors') || (player === 'warriors' && IA === 'celtics')) {
         IAScore++;
         document.getElementById('scoreAI').textContent = IAScore;
         return 'Perdu';
-    } else{
+    } else {
         playerScore++;
         document.getElementById('scoreUser').textContent = playerScore;
-        return 'Gagné'; 
+        if (playerScore == 5) {
+            document.getElementById('victory').innerHTML = `<img src="img/arcade_basketball.gif">`;
+        }
+        return 'Gagné';
     }
 }
+
+// if(playerScore == 5){
+//     document.getElementById('victory').innerHTML = `<img src="assets/img/arcade_basketball.gif">`;
+// }
