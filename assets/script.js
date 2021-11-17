@@ -89,9 +89,6 @@ function displayResult() {
     } else {
         playerScore++;
         document.getElementById('scoreUser').textContent = playerScore;
-        if (playerScore == 5) {
-            document.getElementById('victory').innerHTML = `<img src="img/arcade_basketball.gif">`;
-        }
         return 'Gagné';
     }
 }
